@@ -1,9 +1,8 @@
 version: "3"
 
 services:
-
   server:
-    build: 
+    build:
       context: ./server
     container_name: game_server
     ports:
@@ -13,7 +12,7 @@ services:
       - ./server/.env
 
   client:
-    build: 
+    build:
       context: ./client
     container_name: game_client
     ports:

@@ -3,7 +3,8 @@ import Grid from "./Grid";
 import ScoreBoard from "./ScoreBoard";
 import axios from "axios";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://server:5000/api";
+// ✅ Dynamic API URL (NO hardcoding, NO docker service name)
+const API_URL = `${window.location.protocol}//${window.location.hostname}:5000/api`;
 
 const Game = () => {
   const [board, setBoard] = useState([]);
@@ -24,7 +25,7 @@ const Game = () => {
       setError(null);
     } catch (err) {
       setError("Failed to start new game");
-      console.error(err);
+      console.error("New game error:", err);
     } finally {
       setLoading(false);
     }
@@ -37,16 +38,16 @@ const Game = () => {
         direction,
         score
       });
-      
+
       setBoard(response.data.board);
       setScore(response.data.score);
-      
+
       if (response.data.gameOver) {
         setTimeout(() => {
           alert(`Game Over! Final Score: ${response.data.score}`);
         }, 100);
       }
-      
+
       if (response.data.won) {
         setTimeout(() => {
           alert("Congratulations! You reached 2048!");
