@@ -6,9 +6,7 @@ This project demonstrates a **complete Full Stack Game application** built with 
 
 The entire application can be spun up with a single command, making it ideal for **development, testing, and production-ready deployments**.
 
-![UI](diagram/ui.png)
-
----
+![UI](1.jpg)
 
 ## 🏗️ Project Structure
 
@@ -38,10 +36,6 @@ The entire application can be spun up with a single command, making it ideal for
 ├── docker-compose.yml          # Multi-container orchestration
 └── README.md                   # Project documentation
 ```
-
-![Structure](diagram/structure.png)
-
----
 
 ## 🏗️ Architecture Overview
 
@@ -75,10 +69,6 @@ The entire application can be spun up with a single command, making it ideal for
 │  4. Frontend updates UI with received data                  │
 └─────────────────────────────────────────────────────────────┘
 ```
-
-![Architecture](diagram/architecture.png)
-
----
 
 ## 🛠️ Technologies Used
 
